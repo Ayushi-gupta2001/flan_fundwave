@@ -44,9 +44,9 @@ do
   filename=$(get_filename $line)".xml"
   nmap -sV -oX $root_dir$xml_dir/$filename -oN - -v1 $@ --script=vulners/vulners.nse $line
   upload $xml_dir/$filename
-done < /shared/ips.txt
+done < /shared/ips.txt /shared/ips.txt2
 
-python /output_report.py $root_dir$xml_dir $root_dir$report_file /shared/ips.txt
+python /output_report.py $root_dir$xml_dir $root_dir$report_file /shared/ips.txt /shared/ips.txt2
 if [[ $report_extension = "tex" ]]
 then
     sed -i 's/_/\\_/g' $root_dir$report_file

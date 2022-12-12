@@ -14,5 +14,6 @@ do
 	a="$dir"; 
    done
    mv "$a" "${line}.html"
-   #docker run -d --rm -v /home/fundwave/flan/shared:/shared -e upload=aws -e bucket=mywavebucket -e AWS_ACCESS_KEY_ID=AKIA4QSS3DIKX5YYJEGH -e AWS_SECRET_ACCESS_KEY=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 -e format=html flan_scan
+   #aws s3 sync $b s3://mywavebucket
 done < $file1 
+

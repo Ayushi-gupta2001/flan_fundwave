@@ -124,10 +124,10 @@
 </head>
 <body>
 <h1>Flan scan report</h1>
-<h2>Sun Dec 11 18:45:04 2022</h2>
+<h2>Tue Dec 13 06:02:54 2022</h2>
 <h2>Summary</h2>
 <div id="summary_review">
-    Flan Scan ran a network vulnerability scan with the following Nmap command on Sun Dec 11 18:45:04 2022:
+    Flan Scan ran a network vulnerability scan with the following Nmap command on Tue Dec 13 06:02:54 2022:
     <div id="command">
         <code>nmap -sV -oX &lt;output-file&gt; -oN - -v1 --script=vulners/vulners.nse</code>
     </div>
@@ -135,6 +135,259 @@
 <div id="vulnerable_services">
     <h4 class="section_head">Services with vulnerabilities:</h4>
     <ol class="services_list">
+        
+            <li>
+                <div class="service_cpe">OpenSSH 7.4 (cpe:/a:openbsd:openssh:7.4) </div>
+                <div class="service_vulns">
+                    <ul class="vulns_list">
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="">EXPLOITPACK:98FE96309F9524B8C84C508837551A19</a> Medium
+                                    (5.8)
+                                </div>
+                                <div class="vuln_desc"></div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="">EXPLOITPACK:5330EA02EBDE345BFC9D6DDDD97F9E97</a> Medium
+                                    (5.8)
+                                </div>
+                                <div class="vuln_desc"></div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="">EDB-ID:46516</a> Medium
+                                    (5.8)
+                                </div>
+                                <div class="vuln_desc"></div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="">EDB-ID:46193</a> Medium
+                                    (5.8)
+                                </div>
+                                <div class="vuln_desc"></div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="https://nvd.nist.gov/vuln/detail/CVE-2019-6111">CVE-2019-6111</a> Medium
+                                    (5.8)
+                                </div>
+                                <div class="vuln_desc">An issue was discovered in OpenSSH 7.9. Due to the scp implementation being derived from 1983 rcp, the server chooses which files/directories are sent to the client. However, the scp client only performs cursory validation of the object name returned (only directory traversal attacks are prevented). A malicious scp server (or Man-in-The-Middle attacker) can overwrite arbitrary files in the scp client target directory. If recursive operation (-r) is performed, the server can manipulate subdirectories as well (for example, to overwrite the .ssh/authorized_keys file).</div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="">1337DAY-ID-32328</a> Medium
+                                    (5.8)
+                                </div>
+                                <div class="vuln_desc"></div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="">1337DAY-ID-32009</a> Medium
+                                    (5.8)
+                                </div>
+                                <div class="vuln_desc"></div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="">SSH_ENUM</a> Medium
+                                    (5.0)
+                                </div>
+                                <div class="vuln_desc"></div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="">PACKETSTORM:150621</a> Medium
+                                    (5.0)
+                                </div>
+                                <div class="vuln_desc"></div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="">EXPLOITPACK:F957D7E8A0CC1E23C3C649B764E13FB0</a> Medium
+                                    (5.0)
+                                </div>
+                                <div class="vuln_desc"></div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="">EXPLOITPACK:EBDBC5685E3276D648B4D14B75563283</a> Medium
+                                    (5.0)
+                                </div>
+                                <div class="vuln_desc"></div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="">EDB-ID:45939</a> Medium
+                                    (5.0)
+                                </div>
+                                <div class="vuln_desc"></div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="">EDB-ID:45233</a> Medium
+                                    (5.0)
+                                </div>
+                                <div class="vuln_desc"></div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="https://nvd.nist.gov/vuln/detail/CVE-2018-15919">CVE-2018-15919</a> Medium
+                                    (5.0)
+                                </div>
+                                <div class="vuln_desc">Remotely observable behaviour in auth-gss2.c in OpenSSH through 7.8 could be used by remote attackers to detect existence of users on a target system when GSS2 is in use. NOTE: the discoverer states &#39;We understand that the OpenSSH developers do not want to treat such a username enumeration (or &#34;oracle&#34;) as a vulnerability.&#39;</div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="https://nvd.nist.gov/vuln/detail/CVE-2018-15473">CVE-2018-15473</a> Medium
+                                    (5.0)
+                                </div>
+                                <div class="vuln_desc">OpenSSH through 7.7 is prone to a user enumeration vulnerability due to not delaying bailout for an invalid authenticating user until after the packet containing the request has been fully parsed, related to auth2-gss.c, auth2-hostbased.c, and auth2-pubkey.c.</div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="https://nvd.nist.gov/vuln/detail/CVE-2017-15906">CVE-2017-15906</a> Medium
+                                    (5.0)
+                                </div>
+                                <div class="vuln_desc">The process_open function in sftp-server.c in OpenSSH before 7.6 does not properly prevent write operations in readonly mode, which allows attackers to create zero-length files.</div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="https://nvd.nist.gov/vuln/detail/CVE-2016-10708">CVE-2016-10708</a> Medium
+                                    (5.0)
+                                </div>
+                                <div class="vuln_desc">sshd in OpenSSH before 7.4 allows remote attackers to cause a denial of service (NULL pointer dereference and daemon crash) via an out-of-sequence NEWKEYS message, as demonstrated by Honggfuzz, related to kex.c and packet.c.</div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="">1337DAY-ID-31730</a> Medium
+                                    (5.0)
+                                </div>
+                                <div class="vuln_desc"></div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="https://nvd.nist.gov/vuln/detail/CVE-2021-41617">CVE-2021-41617</a> Medium
+                                    (4.4)
+                                </div>
+                                <div class="vuln_desc">sshd in OpenSSH 6.2 through 8.x before 8.8, when certain non-default configurations are used, allows privilege escalation because supplemental groups are not initialized as expected. Helper programs for AuthorizedKeysCommand and AuthorizedPrincipalsCommand may run with privileges associated with group memberships of the sshd process, if the configuration specifies running the command as a different user.</div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="https://nvd.nist.gov/vuln/detail/CVE-2020-14145">CVE-2020-14145</a> Medium
+                                    (4.3)
+                                </div>
+                                <div class="vuln_desc">The client side in OpenSSH 5.7 through 8.4 has an Observable Discrepancy leading to an information leak in the algorithm negotiation. This allows man-in-the-middle attackers to target initial connection attempts (where no host key for the server has been cached by the client). NOTE: some reports state that 8.5 and 8.6 are also affected.</div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="https://nvd.nist.gov/vuln/detail/CVE-2019-6110">CVE-2019-6110</a> Medium
+                                    (4.0)
+                                </div>
+                                <div class="vuln_desc">In OpenSSH 7.9, due to accepting and displaying arbitrary stderr output from the server, a malicious server (or Man-in-The-Middle attacker) can manipulate the client output, for example to use ANSI control codes to hide additional files being transferred.</div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short medium">
+                                    <a class="vuln_link"
+                                       href="https://nvd.nist.gov/vuln/detail/CVE-2019-6109">CVE-2019-6109</a> Medium
+                                    (4.0)
+                                </div>
+                                <div class="vuln_desc">An issue was discovered in OpenSSH 7.9. Due to missing character encoding in the progress display, a malicious server (or Man-in-The-Middle attacker) can employ crafted object names to manipulate the client output, e.g., by using ANSI control codes to hide additional files being transferred. This affects refresh_progress_meter() in progressmeter.c.</div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short low">
+                                    <a class="vuln_link"
+                                       href="https://nvd.nist.gov/vuln/detail/CVE-2018-20685">CVE-2018-20685</a> Low
+                                    (2.6)
+                                </div>
+                                <div class="vuln_desc">In OpenSSH 7.9, scp.c in the scp client allows remote SSH servers to bypass intended access restrictions via the filename of . or an empty filename. The impact is modifying the permissions of the target directory on the client side.</div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short low">
+                                    <a class="vuln_link"
+                                       href="">PACKETSTORM:151227</a> Low
+                                    (0.0)
+                                </div>
+                                <div class="vuln_desc"></div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short low">
+                                    <a class="vuln_link"
+                                       href="">MSF:AUXILIARY-SCANNER-SSH-SSH_ENUMUSERS-</a> Low
+                                    (0.0)
+                                </div>
+                                <div class="vuln_desc"></div>
+                            </li>
+                        
+                            <li>
+                                <div class="vuln_short low">
+                                    <a class="vuln_link"
+                                       href="">1337DAY-ID-30937</a> Low
+                                    (0.0)
+                                </div>
+                                <div class="vuln_desc"></div>
+                            </li>
+                        
+                    </ul>
+                    <div class="locations_container">
+                        <div class="locations_head">The above 26 vulnerabilities apply
+                            to these network locations:
+                        </div>
+                        <ul class="locations_list">
+                            
+                                <li> <span class="ip_vulnerable"> 13.238.217.141 </span> Ports: <span class="ports"> [22] </span></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </li>
         
     </ol>
 
@@ -144,10 +397,28 @@
     <ul class="non_vuln_service_list">
         
             <li>
-                <div class="service_name"> </div>
+                <div class="service_name">http </div>
                 <ul class="locations_list">
                     
-                      <li><span class="ip">164.100.77.58</span> Ports: <span class="ports">[80, 443]</span></li>
+                      <li><span class="ip">164.100.77.58</span> Ports: <span class="ports">[80]</span></li>
+                    
+                </ul>
+            </li>
+        
+            <li>
+                <div class="service_name">https </div>
+                <ul class="locations_list">
+                    
+                      <li><span class="ip">164.100.77.58</span> Ports: <span class="ports">[443]</span></li>
+                    
+                </ul>
+            </li>
+        
+            <li>
+                <div class="service_name">nginx (cpe:/a:igor_sysoev:nginx) </div>
+                <ul class="locations_list">
+                    
+                      <li><span class="ip">13.238.217.141</span> Ports: <span class="ports">[80, 443]</span></li>
                     
                 </ul>
             </li>

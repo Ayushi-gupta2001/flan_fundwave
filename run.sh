@@ -36,17 +36,18 @@ function upload {
 function get_filename(){
     echo $1 | tr / -
 }
-
+#file1="/home/fundwave/flan/shared/ips.txt"
 mkdir $root_dir$xml_dir
-while IFS= read -r line
+while IFS= read -r lie
 do
-  current_time=$(date "+%Y.%m.%d-%H.%M.%S")
-  filename=$(get_filename $line)".xml"
-  nmap -sV -oX $root_dir$xml_dir/$filename -oN - -v1 $@ --script=vulners/vulners.nse $line
-  upload $xml_dir/$filename
-done < /shared/ips.txt /shared/ips.txt2
-
-python /output_report.py $root_dir$xml_dir $root_dir$report_file /shared/ips.txt /shared/ips.txt2
+           current_time=$(date "+%Y.%m.%d-%H.%M.%S")
+           filename=$(get_filename $line)".xml"
+           nmap -sV -oX $root_dir$xml_dir/$filename -oN - -v1 $@ --script=vulners/vulners.nse $line
+           upload $xml_dir/$filename
+done < /shared/ips.txt 
+#done < /home/fundwave/flan/shared/combined.txt
+python /output_report.py $root_dir$xml_dir $root_dir$report_file /shared/ips.txt
+#done < /shared/combined.txt
 if [[ $report_extension = "tex" ]]
 then
     sed -i 's/_/\\_/g' $root_dir$report_file
@@ -55,3 +56,4 @@ then
     sed -i 's/%/\\%/g' $root_dir$report_file
 fi
 upload $report_file
+#done < /home/fundwave/flan/shared/combined.txt

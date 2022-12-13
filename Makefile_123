@@ -1,0 +1,14 @@
+build :
+	docker build --no-cache -t flan_scan -f Dockerfile .
+
+container_name = flan_$(shell date +'%s')
+start :
+	docker run --rm --cap-drop=all --cap-add=NET_RAW --name $(container_name) -v "$(CURDIR)/shared:/shared:Z" flan_scan
+
+md :
+	docker run --rm --cap-drop=all --cap-add=NET_RAW --name $(container_name) -v "$(CURDIR)/shared:/shared:Z" -e format=md flan_scan
+
+html :
+	docker run --rm --cap-drop=all --cap-add=NET_RAW --name $(container_name) -v "$(CURDIR)/shared:/shared:Z" -e format=html -e upload=aws -e bucket=mywavebucket -e AWS_ACCESS_KEY_ID=AKIA4QSS3DIKX5YYJEGH -e AWS_SECRET_ACCESS_KEY=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 flan_scan
+json :
+	docker run --rm --cap-drop=all --cap-add=NET_RAW --name $(container_name) -v "$(CURDIR)/shared:/shared:Z" -e format=json flan_scan

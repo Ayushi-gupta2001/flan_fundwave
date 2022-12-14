@@ -1,4 +1,0 @@
-AWS Server Access:
-
-Ip Address : 3.110.212.247
-Key to Access : firstkeyofaws.pem
